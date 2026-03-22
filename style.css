@@ -1,0 +1,261 @@
+/* ===========================
+   CSS Variables (Color Palette)
+   =========================== */
+:root {
+  --navy: #1a2e4a;
+  --teal: #2a7f7f;
+  --light-teal: #e8f4f4;
+  --white: #ffffff;
+  --light-gray: #f5f7fa;
+  --dark-gray: #333333;
+  --mid-gray: #666666;
+  --accent: #e07b39;
+}
+
+/* ===========================
+   Reset & Base Styles
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  line-height: 1.7;
+}
+
+/* ===========================
+   Navigation Bar
+   =========================== */
+#navbar {
+  background-color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--white);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: var(--light-teal);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+/* ===========================
+   Hero / About Section
+   =========================== */
+.hero-section {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: #cbd8e8;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* ===========================
+   Button
+   =========================== */
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0652a;
+}
+
+/* ===========================
+   Sections
+   =========================== */
+.section {
+  padding: 70px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  background-color: var(--light-gray);
+  max-width: 100%;
+  padding: 70px 40px;
+}
+
+.section-alt .section-title,
+.section-alt .skills-grid,
+.section-alt .contact-box {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 40px;
+  border-left: 5px solid var(--teal);
+  padding-left: 16px;
+}
+
+/* ===========================
+   Cards (Education & Projects)
+   =========================== */
+.card-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid #dde3ec;
+  border-top: 4px solid var(--teal);
+  border-radius: 6px;
+  padding: 28px;
+  flex: 1;
+  min-width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.card-sub {
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--mid-gray);
+  margin-bottom: 6px;
+}
+
+/* ===========================
+   Skills Grid
+   =========================== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-item {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+.contact-box {
+  background-color: var(--white);
+  border-radius: 6px;
+  padding: 36px;
+  border: 1px solid #dde3ec;
+  max-width: 560px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contact-box p {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: var(--dark-gray);
+}
+
+.label {
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 110px;
+  display: inline-block;
+}
+
+.contact-box a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+  background-color: var(--navy);
+  color: #8faec5;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.88rem;
+}
